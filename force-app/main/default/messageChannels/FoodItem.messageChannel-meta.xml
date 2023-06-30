@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="https://soap.sforce.com/2006/04/metadata">
+    <masterLabel>sendFoodItem</masterLabel>
+    <isExposed>true</isExposed>
+    <description>this message channel is used to send selected food item to itemdetail component</description>
+    <lightningMessageFields>
+        <fieldName>id</fieldName>
+        <description>id of the dish</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>dishName</fieldName>
+        <description>name of the dish</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemId</fieldName>
+        <description>This is Id of the selected food item</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemName</fieldName>
+        <description>This is Name of the selected food item</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemQuantity</fieldName>
+        <description>This is Quantity of the selected food item</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

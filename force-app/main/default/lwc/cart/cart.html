@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Cart">
+        <div class="cartul">
+            <table class="size">
+                <thead>
+                    <tr>
+                        <th class="thname">name</th>
+                        <th>Quantity</th>
+                        <th>price</th>
+                        <!-- <th>Remove</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={uniqueCartElements} for:item="uniqueCartElement">
+                    
+                        <tr class="bor" key={uniqueCartElement.id}>
+                            <td class="col">{uniqueCartElement.name}</td>
+                            <td>{uniqueCartElement.quantity}</td>
+                            <td>{uniqueCartElement.price}</td>
+                            <td><lightning-button class="remove" label="Remove" value={uniqueCartElement.id} onclick={handleRemove}></lightning-button></td>
+                        </tr>
+                    </template>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="cartul">
+            <p>Total $ {total}</p>
+            <lightning-button label="Order" class="order-button" onclick={handleOrders}></lightning-button>
+        </div>
+    </lightning-card>
+ </template>

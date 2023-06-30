@@ -1,0 +1,40 @@
+<template >
+    <lightning-layout>
+        <lightning-button class="btn" variant="inverse" label="Appetizers" onclick={loadAppetizers}></lightning-button>
+        <lightning-button class="btn" variant="inverse" label="Entrees" onclick={loadEntrees}></lightning-button>
+        <lightning-button class="btn" variant="inverse" label="Dessert" onclick={loadDesserts}></lightning-button>
+    </lightning-layout>
+            <div class="container">
+                    <!-- Following template for Appetizers food items -->
+                    <template if:true={appetizers}>
+                        <template for:each={itemappetizers} for:item="itemappetizer">
+                            <c-appetizers 
+                                        key={itemappetizer.Id}
+                                        appetizers={itemappetizer}
+                                        ontileclick={handleTileClick}>
+                            </c-appetizers>
+                        </template>
+                    </template>
+               
+                    <!-- Following template for Entrees food items -->
+                    <template if:true={entrees}>
+                        <template for:each={itemEntrees} for:item="itementree">
+                            <c-entrees
+                                    key={itementree.Id} 
+                                    entrees={itementree}
+                                    ongetentress={handleItemEntrees}> 
+                            </c-entrees>
+                        </template>
+                    </template>
+                    <!-- Following template for Desserts food items -->
+                    <template if:true={desserts}>
+                        <template for:each={itemDesserts} for:item="itemDessert">
+                            <c-dessert
+                                    key={itemDessert.Id} 
+                                    desserts={itemDessert}
+                                    ongetdessetrs={handleItemDesserts}>
+                            </c-dessert>
+                        </template>
+                    </template> 
+            </div>
+</template>

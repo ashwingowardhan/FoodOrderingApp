@@ -1,0 +1,14 @@
+<template>
+    <div class="wrapper">
+        <header class="header">Available Food Items</header>
+        <section class="content">
+            <div class="columns">
+                <main class="main">
+                    <c-menu onproductselected={handleProductSelected}
+                            onentreeselected={handleEntressSelected}
+                            ondessertselected={handleDessertsSelected}></c-menu>
+                </main>
+            </div>
+        </section>
+    </div>
+</template>

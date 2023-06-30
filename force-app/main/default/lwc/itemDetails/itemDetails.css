@@ -1,0 +1,29 @@
+.container {
+    border: 1px rgb(17, 8, 8) solid;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin:7px;
+    padding: 2px;
+
+    max-width: 495px;
+    min-width: 240px;
+    display: flex;
+    flex-direction:column;
+}
+
+.food-quantity-details{
+    margin:7px;
+    padding: 2px;
+
+}
+.add{
+    margin-left: 3px;
+}
+.quantity{
+    margin-top: 3px;
+    margin-left: 20px;
+    padding-top: 3px;
+}
+.remove{
+    margin: auto;
+}

@@ -1,0 +1,12 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="container">
+        <a onclick={tileClick}>
+            <p>{appetizers.Id}</p>
+            <p class="title">{appetizers.Name}</p>
+            <lightning-formatted-rich-text value={appetizers.Image__c}></lightning-formatted-rich-text>
+            <p>$:-{appetizers.Appetizer_price__c}</p>
+        </a>
+    </div>
+</template>

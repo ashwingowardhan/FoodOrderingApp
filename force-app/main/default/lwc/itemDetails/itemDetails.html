@@ -1,0 +1,21 @@
+<template>
+        <div class="thediv">
+            <lightning-card title="Selected Food Item">
+                <div class="container">
+                    <p>Id: <span>{Id}</span></p>
+                    <p>Name: <span>{Name}</span></p>
+                    <lightning-formatted-rich-text value={img}></lightning-formatted-rich-text>
+                    <p>price:-{price}$</p>
+                </div>
+                <div class="food-quantity-details" >
+                    <lightning-layout slot="footer">
+                        <lightning-button class="add" title="add" icon-name="utility:add" onclick={handleAddQuantity}></lightning-button>
+                        <p class="quantity">Quantity <span>{Quantity}</span></p>
+                        <lightning-button class="remove" title="remove" icon-name="utility:dash" onclick={handleRemoveQuantity}></lightning-button>
+                        <lightning-button class="slds-m-left_xx-large slds-p-left_xx-large" label="Add To Cart" onclick={addItemToCart}></lightning-button>
+                    </lightning-layout>
+                </div>
+            </lightning-card>
+            
+        </div>
+</template>

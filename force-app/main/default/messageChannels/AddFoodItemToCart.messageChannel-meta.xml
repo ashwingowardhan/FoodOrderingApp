@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="https://soap.sforce.com/2006/04/metadata">
+    <masterLabel>addSelectedFoodItemToCart</masterLabel>
+    <isExposed>true</isExposed>
+    <description>This message channel is used to add selected food item to cart</description>
+    <lightningMessageFields>
+        <fieldName>itemId</fieldName>
+        <description>This is Id of the selected food item</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemName</fieldName>
+        <description>This is Name of the selected food item</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemQuantity</fieldName>
+        <description>This is Quantity of the selected food item</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemPrice</fieldName>
+        <description>This is Price of the selected food item</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

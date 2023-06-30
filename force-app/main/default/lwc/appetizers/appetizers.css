@@ -1,0 +1,31 @@
+.container {
+    border: 1px rgb(168, 166, 166) solid;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin:7px;
+    padding: 2px;
+    /* this max and min width is used to control the width of food item */
+    max-width: 196px;
+    min-width: 140px;
+    display: flex;
+    flex-direction:row;
+}
+
+.title {
+    white-space: nowrap; 
+    width: 170px;
+    font-weight: strong;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: blue;
+}

@@ -1,0 +1,10 @@
+<template >
+    <div class="container">
+        <a onclick={tileClick}>
+            <p>{entrees.Id}</p>
+            <div class="title">{entrees.Name}</div>
+            <lightning-formatted-rich-text value={entrees.entree_Image__c}></lightning-formatted-rich-text>
+            <p>$:-{entrees.Entree_Price__c}</p>
+        </a>
+     </div>
+</template>
