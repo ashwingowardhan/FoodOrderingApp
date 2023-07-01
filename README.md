@@ -1,3 +1,30 @@
+# Description of project
+
+ This food ordering application can be used in small restaurants by customers to order food
+ 
+ The application has Three main modules
+   1. appetizers
+   2. entrees
+   3. desserts
+
+All the LWC(Lightning Web Components) modules are in ```force-app/main/default/lwc``` folder and the above three components(modules) contain particular food items and their brief information
+These three modules are child components of ```menu``` component and menu component is child component of ```itemSelector``` component.
+So all the components(modules) loading in ```itemSelector``` parent component.
+When the user clicks on a particular food item it loads in ```itemDetails``` component. This component shows detail information of selected item i.e. id, photo, name, price
+
+
+##### Programming Languages used
+  - Javascript
+  - Salesforce Apex
+  - SOQL (Salesforce Structured Query Language)
+  - css
+  - HTML and lightning web components
+
+##### Tools And Technologies used
+ - VS code editor
+ - Salesforce CRM
+
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
