@@ -7,39 +7,50 @@
    2. entrees
    3. desserts
 
+#### force-app/main/default/lwc
 All the LWC(Lightning Web Components) modules are in ```force-app/main/default/lwc``` folder and the above three components(modules) contain particular food items and their brief information
-These three modules are child components of ```menu``` component and menu component is child component of ```itemSelector``` component.
+
+#### menu
+These three modules are child components of ```menu``` component and the menu component is the child component of ```itemSelector``` component.
 So all the components(modules) loading in ```itemSelector``` parent component.
-When the user clicks on a particular food item it loads in ```itemDetails``` component. This component shows detail information of selected item i.e. id, photo, name, price
 
+#### itemDetails component
+When the user clicks on a particular food item it loads in ```itemDetails``` component. This component shows detailed information on selected items i.e. id, photo, name, price
+We can select the food item quantity and add it to ```cart``` component.
 
-##### Programming Languages used
+#### cart component
+```cart``` component contains information on selected food items i.e. the price and quantity and total amount to be paid
+After placing an order the order gets created in ```Order``` salesforce object which is created in the Salesforce CRM
+
+#### Message Channels
+Message Channels in Salesforce are used to send information to different components in the app
+This app has two message channels
+ - AddFoodItemToCart.messageChannel-meta.xml
+ - FoodItem.messageChannel-meta.xml
+As the name says ```AddFoodItemToCart.messageChannel-meta.xml``` is used to send selected food items to ```cart``` component
+and ```FoodItem.messageChannel-meta.xml``` is used to send a selected food item from ```itemSelector``` component to ```itemDetails``` component. 
+
+#### Salesforce CRM objects
+There are four CRM objects
+  - appetizers
+  - entrees
+  - dessert
+  - orders
+
+App admin adds different food items to ```appetizers, entrees, dessert``` objects, and ```orders``` object keeps a record of placed orders
+
+#### classes
+ There are three APEX classes are created
+  ```Appetizers.cls, Entrees.cls, Desserts.cls``` are used to extract records from salesforce objects and put that records in LWC components
+  ```CreateOrders.cls``` class is used to create order records and put them in ```orders``` object of salesforce CRM
+  
+#### Programming Languages used
   - Javascript
   - Salesforce Apex
   - SOQL (Salesforce Structured Query Language)
-  - css
+  - CSS
   - HTML and lightning web components
 
-##### Tools And Technologies used
+#### Tools And Technologies used
  - VS code editor
  - Salesforce CRM
-
-
-# Salesforce DX Project: Next Steps
-
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
-
-## How Do You Plan to Deploy Your Changes?
-
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
