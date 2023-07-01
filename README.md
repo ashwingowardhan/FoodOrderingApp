@@ -45,7 +45,7 @@ App admin adds different food items to ```appetizers, entrees, dessert``` object
   ```CreateOrders.cls``` class is used to create order records and put them in ```orders``` object of salesforce CRM
   
 #### Programming Languages used
-  - Javascript
+  - JavaScript
   - Salesforce Apex
   - SOQL (Salesforce Structured Query Language)
   - CSS
